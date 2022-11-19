@@ -22,17 +22,17 @@ let theme = createTheme({
         text: {
             primary: '#800080',
             secondary: '#7C7C7C',
-            disabled: '#999999',
+            disabled: '#80008040',
         },
         background: {
-            default: '#E5E5E5',
+            default: '#FFFFFF',
         },
         info: {
             main: '#7C7C7C',
         },
     },
     typography: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Poppins',
         h1: {
             fontSize: 32,
             fontWeight: 500,
@@ -44,7 +44,8 @@ let theme = createTheme({
         h3: {
             fontSize: 20,
             fontWeight: 500,
-            letterSpacing: '150%'
+            letterSpacing: '3rem',
+            textAlign: 'center'
         },
         h4: {
             fontSize: 20,
@@ -69,6 +70,7 @@ let theme = createTheme({
         button: {
             fontSize: 16,
             fontWeight: 500,
+            textTransform: "none"
         },
         subtitle1: {
             fontSize: 18,
@@ -90,6 +92,6 @@ theme = responsiveFontSizes(theme)
 
 theme.shadows[1] =
     '0px 3px 100px rgba(0, 0, 0, 0.1);'
-theme.linearGradient = 'linear-gradient(270deg, #800080 0%, #FF864C 100%)'
+theme.linearGradients = 'linear-gradient(270deg, #800080 0%, #FF864C 100%)'
 
 export default theme
