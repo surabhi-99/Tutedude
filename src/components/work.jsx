@@ -1,48 +1,47 @@
 import {
-  AccountBalance,
-  AccountBalanceWallet,
-  Groups,
-  LocalOffer,
+    AccountBalanceWallet, CurrencyRupee,
+    Groups,
+    LocalOffer,
 } from "@mui/icons-material";
-import { Avatar, Grid, Stack, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import WorkInfo from "./WorkInfo";
 
-const work = (props) => {
+const Work = (props) => {
   return (
     <Grid container spacing={2}>
       <WorkInfo
         heading="Invite your Friends"
         description="Share the link tutedude.com with
 your friends"
-        image={<Groups />}
+        image={Groups}
       />
 
       <WorkInfo
         heading="Friend purchases any course"
         description="Using your REFERRAL CODE in the payments page"
-        image={<LocalOffer />}
+        image={LocalOffer}
       />
 
       <WorkInfo
         heading="You get ₹ 200 as referral money"
         description="On total purchase the friend makes, into your wallet"
-        image={<CurrencyRupee />}
+        image={CurrencyRupee}
       />
 
       <WorkInfo
         heading="Your Friend gets ₹ 200 Off "
         description="On his overall fee on successful purchase using your referral code "
-        image={<AccountBalanceWallet />}
+        image={AccountBalanceWallet}
       />
 
       <WorkInfo
         heading="Transfer money from wallet"
         description="When the wallet balance reaches
 ₹200 or more, you can withdraw it"
-        image={<AccountBalanceWallet />}
+        image={AccountBalanceWallet}
       />
     </Grid>
   );
 };
 
-export default work;
+export default Work;

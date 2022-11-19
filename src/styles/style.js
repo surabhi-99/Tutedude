@@ -25,7 +25,7 @@ let theme = createTheme({
             disabled: '#999999',
         },
         background: {
-            default: '#EEEEEE',
+            default: '#E5E5E5',
         },
         info: {
             main: '#7C7C7C',
@@ -90,5 +90,6 @@ theme = responsiveFontSizes(theme)
 
 theme.shadows[1] =
     '0px 3px 100px rgba(0, 0, 0, 0.1);'
+theme.linearGradient = 'linear-gradient(270deg, #800080 0%, #FF864C 100%)'
 
 export default theme
