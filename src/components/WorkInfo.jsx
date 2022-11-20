@@ -17,7 +17,7 @@ const WorkInfo = (props) => {
                     }}/>
                 </Avatar>
                 <Stack spacing={2}>
-                    <Typography variant="h6">{props.heading}</Typography>
+                    <Typography variant="body1">{props.heading}</Typography>
                     <Typography variant="body2">{props.description}</Typography>
                 </Stack>
             </Stack>

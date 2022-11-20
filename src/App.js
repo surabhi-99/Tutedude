@@ -1,5 +1,5 @@
 import {
-    createBrowserRouter,
+    createBrowserRouter, Outlet,
     RouterProvider,
 } from "react-router-dom";
 import './App.css';
@@ -14,28 +14,36 @@ function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Refer/>,
+            element: (
+                <div className="App">
+                    <Header/>
+                    <Container sx={{my: {sm: 3, md: 6}}}>
+                        <Outlet/>
+                        <Box my={2}>
+                            <Link href="/terms" sx={{textDecoration: 'none'}}>
+                                <Typography variant="body1" color="primary">Terms & Conditions</Typography>
+                            </Link>
+                        </Box>
+                    </Container>
+                </div>
+            ),
+            children: [
+                {
+                    path: "/",
+                    element: <Refer/>,
+                },
+                {
+                    path: '/refer/friends',
+                    element: <Friend/>
+                }
+            ],
         },
-        {
-            path: '/refer/friends',
-            element: <Friend/>
-        }
+
     ]);
 
     return (
         <ThemeProvider theme={theme}>
-            <div className="App">
-                <Header/>
-                <Container sx={{marginY: 6}}>
-                    <RouterProvider router={router}/>
-                    <Box my={2}>
-                        <Link href="/terms" sx={{textDecoration: 'none'}}>
-                            <Typography variant="body1" color="primary">Terms & Conditions</Typography>
-                        </Link>
-                    </Box>
-
-                </Container>
-            </div>
+            <RouterProvider router={router}/>
         </ThemeProvider>
     );
 }

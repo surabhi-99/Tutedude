@@ -52,12 +52,13 @@ let theme = createTheme({
             fontWeight: 700,
         },
         h5: {
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: 700,
         },
         h6: {
             fontSize: 16,
             fontWeight: 500,
+            letterSpacing: '0.75em'
         },
         body1: {
             fontSize: 16,
@@ -81,8 +82,8 @@ let theme = createTheme({
             fontWeight: 400,
         },
         caption: {
-            fontSize: 10,
-            fontWeight: 400,
+            fontSize: 14,
+            fontWeight: 500,
         },
     },
     breakpoints,

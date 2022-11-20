@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Kushal Khare",
+    "date": "20/11/2022",
+    "courses": [
+      "Java",
+      "C++",
+      "FrontEnd"
+    ],
+    "amount": 200
+  },
+  {
+    "name": "Surabhi Thakur",
+    "date": "20/01/2022",
+    "courses": [
+      "Java",
+      "C++",
+      "FrontEnd",
+      "BackEnd"
+    ],
+    "amount": 100
+  },
+  {
+    "name": "Surabhi Thakur",
+    "date": "20/01/2022",
+    "courses": [
+      "Java",
+      "C++",
+      "FrontEnd",
+      "BackEnd",
+      "Full Stack",
+      "Python",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "amount": 100
+  },
+  {
+    "name": "Surabhi Thakur",
+    "date": "20/01/2022",
+    "courses": [
+      "Java",
+      "C++",
+      "FrontEnd",
+      "BackEnd"
+    ],
+    "amount": 100
+  }
+]

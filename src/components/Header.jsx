@@ -1,6 +1,8 @@
 import {AppBar, Box, Breadcrumbs, Container, Link, Toolbar, Typography} from "@mui/material";
+import {useLocation} from "react-router-dom";
 
 const Header = () => {
+    const location = useLocation();
     return <AppBar position="sticky" sx={{background: 'white', boxShadow: 'none', zIndex: 2}}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -31,18 +33,25 @@ const Header = () => {
                     </Typography>
                 </Box>
             </Toolbar>
-            <Container>
-                <Breadcrumbs separator="›" mx={10} my={2}>
-                    <Link underline="hover" color="inherit" href="/">
+            <Container sx={{marginY: 6}}>
+                <Breadcrumbs separator="›" my={2}>
+                    <Link underline="hover" color="inherit" href="#">
                         <Typography variant="subtitle2" color="black">UI/UX</Typography>
                     </Link>
                     <Link
                         underline="hover"
                         color="inherit"
-                        href="/material-ui/getting-started/installation/"
+                        href="/"
                     >
                         <Typography variant="subtitle2" color="black">Refer & Earn</Typography>
                     </Link>
+                    {location.pathname === '/refer/friends' && <Link
+                        underline="hover"
+                        color="inherit"
+                        href="/refer/friends"
+                    >
+                        <Typography variant="subtitle2" color="black">Friends Referred</Typography>
+                    </Link>}
                 </Breadcrumbs>
             </Container>
         </Container>
